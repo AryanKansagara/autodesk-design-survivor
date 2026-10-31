@@ -1,0 +1,1208 @@
+{
+  "schemaVersion": 1,
+  "claim": "authored contract evaluation only; no Fusion, B-rep, geometric rebuild, manufacturability or reference repair validation",
+  "runs": [
+    {
+      "contractVersion": "authored-bracket-v1",
+      "parameters": {
+        "edgeDistance": 4,
+        "fillet": 1,
+        "height": 40,
+        "holeDiameter": 6,
+        "thickness": 4,
+        "width": 40
+      },
+      "strategy": "face-index",
+      "omitHoles": false,
+      "includeUnknownGroup": false,
+      "fingerprint": "d1fcd88df8ccc85e2902e4d2ee2648462b27072ae7484962f5b822671ca46d88",
+      "provenance": "authored symbolic design contract; no geometric kernel",
+      "fusionIntegration": false,
+      "status": "healthy",
+      "violations": [],
+      "features": [
+        {
+          "id": "base",
+          "dependencies": [],
+          "status": "healthy",
+          "reason": "stock width and height at least twice thickness"
+        },
+        {
+          "id": "hole-reference",
+          "dependencies": [
+            "base"
+          ],
+          "status": "healthy",
+          "reason": "authored unstable face-index threshold at thickness > 6"
+        },
+        {
+          "id": "holes",
+          "dependencies": [
+            "hole-reference"
+          ],
+          "status": "healthy",
+          "reason": "authored edge margin and two-hole spacing constraints"
+        },
+        {
+          "id": "fillet",
+          "dependencies": [
+            "holes"
+          ],
+          "status": "healthy",
+          "reason": "authored fillet clearance bound"
+        },
+        {
+          "id": "topology-contract",
+          "dependencies": [
+            "fillet"
+          ],
+          "status": "healthy",
+          "reason": "authored expected hole count preserved",
+          "expectedHoles": 2,
+          "declaredHoles": 2
+        }
+      ],
+      "firstFailure": null
+    },
+    {
+      "contractVersion": "authored-bracket-v1",
+      "parameters": {
+        "edgeDistance": 4,
+        "fillet": 1,
+        "height": 40,
+        "holeDiameter": 6,
+        "thickness": 4,
+        "width": 40
+      },
+      "strategy": "named",
+      "omitHoles": false,
+      "includeUnknownGroup": false,
+      "fingerprint": "cf68d63af3e2c6e6c946c9bc88eadef97d45e05a4b83d5d1ef197a87d6c26fae",
+      "provenance": "authored symbolic design contract; no geometric kernel",
+      "fusionIntegration": false,
+      "status": "healthy",
+      "violations": [],
+      "features": [
+        {
+          "id": "base",
+          "dependencies": [],
+          "status": "healthy",
+          "reason": "stock width and height at least twice thickness"
+        },
+        {
+          "id": "hole-reference",
+          "dependencies": [
+            "base"
+          ],
+          "status": "healthy",
+          "reason": "authored named reference assumption"
+        },
+        {
+          "id": "holes",
+          "dependencies": [
+            "hole-reference"
+          ],
+          "status": "healthy",
+          "reason": "authored edge margin and two-hole spacing constraints"
+        },
+        {
+          "id": "fillet",
+          "dependencies": [
+            "holes"
+          ],
+          "status": "healthy",
+          "reason": "authored fillet clearance bound"
+        },
+        {
+          "id": "topology-contract",
+          "dependencies": [
+            "fillet"
+          ],
+          "status": "healthy",
+          "reason": "authored expected hole count preserved",
+          "expectedHoles": 2,
+          "declaredHoles": 2
+        }
+      ],
+      "firstFailure": null
+    },
+    {
+      "contractVersion": "authored-bracket-v1",
+      "parameters": {
+        "edgeDistance": 4,
+        "fillet": 1,
+        "height": 40,
+        "holeDiameter": 12,
+        "thickness": 4,
+        "width": 40
+      },
+      "strategy": "face-index",
+      "omitHoles": false,
+      "includeUnknownGroup": false,
+      "fingerprint": "d261603fbac8d168c046ebf1039b0be9eaa445a9d606337056712f40e0abe129",
+      "provenance": "authored symbolic design contract; no geometric kernel",
+      "fusionIntegration": false,
+      "status": "failed",
+      "violations": [],
+      "features": [
+        {
+          "id": "base",
+          "dependencies": [],
+          "status": "healthy",
+          "reason": "stock width and height at least twice thickness"
+        },
+        {
+          "id": "hole-reference",
+          "dependencies": [
+            "base"
+          ],
+          "status": "healthy",
+          "reason": "authored unstable face-index threshold at thickness > 6"
+        },
+        {
+          "id": "holes",
+          "dependencies": [
+            "hole-reference"
+          ],
+          "status": "failed",
+          "reason": "authored edge margin and two-hole spacing constraints"
+        },
+        {
+          "id": "fillet",
+          "dependencies": [
+            "holes"
+          ],
+          "status": "blocked",
+          "reason": "upstream contract did not pass",
+          "blockedBy": [
+            "holes"
+          ]
+        },
+        {
+          "id": "topology-contract",
+          "dependencies": [
+            "fillet"
+          ],
+          "status": "blocked",
+          "reason": "upstream contract did not pass",
+          "blockedBy": [
+            "fillet"
+          ]
+        }
+      ],
+      "firstFailure": "holes"
+    },
+    {
+      "contractVersion": "authored-bracket-v1",
+      "parameters": {
+        "edgeDistance": 4,
+        "fillet": 1,
+        "height": 40,
+        "holeDiameter": 12,
+        "thickness": 4,
+        "width": 40
+      },
+      "strategy": "named",
+      "omitHoles": false,
+      "includeUnknownGroup": false,
+      "fingerprint": "42c07c2d0ee3a0938f24e5e95edcd185958caf49b81961751d2b150a562bb56f",
+      "provenance": "authored symbolic design contract; no geometric kernel",
+      "fusionIntegration": false,
+      "status": "failed",
+      "violations": [],
+      "features": [
+        {
+          "id": "base",
+          "dependencies": [],
+          "status": "healthy",
+          "reason": "stock width and height at least twice thickness"
+        },
+        {
+          "id": "hole-reference",
+          "dependencies": [
+            "base"
+          ],
+          "status": "healthy",
+          "reason": "authored named reference assumption"
+        },
+        {
+          "id": "holes",
+          "dependencies": [
+            "hole-reference"
+          ],
+          "status": "failed",
+          "reason": "authored edge margin and two-hole spacing constraints"
+        },
+        {
+          "id": "fillet",
+          "dependencies": [
+            "holes"
+          ],
+          "status": "blocked",
+          "reason": "upstream contract did not pass",
+          "blockedBy": [
+            "holes"
+          ]
+        },
+        {
+          "id": "topology-contract",
+          "dependencies": [
+            "fillet"
+          ],
+          "status": "blocked",
+          "reason": "upstream contract did not pass",
+          "blockedBy": [
+            "fillet"
+          ]
+        }
+      ],
+      "firstFailure": "holes"
+    },
+    {
+      "contractVersion": "authored-bracket-v1",
+      "parameters": {
+        "edgeDistance": 8,
+        "fillet": 1,
+        "height": 40,
+        "holeDiameter": 6,
+        "thickness": 4,
+        "width": 40
+      },
+      "strategy": "face-index",
+      "omitHoles": false,
+      "includeUnknownGroup": false,
+      "fingerprint": "2db9505dd596967256e4e1873c2fd464b4c0467757e5d78598b11d9e269093f4",
+      "provenance": "authored symbolic design contract; no geometric kernel",
+      "fusionIntegration": false,
+      "status": "healthy",
+      "violations": [],
+      "features": [
+        {
+          "id": "base",
+          "dependencies": [],
+          "status": "healthy",
+          "reason": "stock width and height at least twice thickness"
+        },
+        {
+          "id": "hole-reference",
+          "dependencies": [
+            "base"
+          ],
+          "status": "healthy",
+          "reason": "authored unstable face-index threshold at thickness > 6"
+        },
+        {
+          "id": "holes",
+          "dependencies": [
+            "hole-reference"
+          ],
+          "status": "healthy",
+          "reason": "authored edge margin and two-hole spacing constraints"
+        },
+        {
+          "id": "fillet",
+          "dependencies": [
+            "holes"
+          ],
+          "status": "healthy",
+          "reason": "authored fillet clearance bound"
+        },
+        {
+          "id": "topology-contract",
+          "dependencies": [
+            "fillet"
+          ],
+          "status": "healthy",
+          "reason": "authored expected hole count preserved",
+          "expectedHoles": 2,
+          "declaredHoles": 2
+        }
+      ],
+      "firstFailure": null
+    },
+    {
+      "contractVersion": "authored-bracket-v1",
+      "parameters": {
+        "edgeDistance": 8,
+        "fillet": 1,
+        "height": 40,
+        "holeDiameter": 6,
+        "thickness": 4,
+        "width": 40
+      },
+      "strategy": "named",
+      "omitHoles": false,
+      "includeUnknownGroup": false,
+      "fingerprint": "629ad2405c4574d41c97627efa3d791758922be662378786ec18165cafff54e0",
+      "provenance": "authored symbolic design contract; no geometric kernel",
+      "fusionIntegration": false,
+      "status": "healthy",
+      "violations": [],
+      "features": [
+        {
+          "id": "base",
+          "dependencies": [],
+          "status": "healthy",
+          "reason": "stock width and height at least twice thickness"
+        },
+        {
+          "id": "hole-reference",
+          "dependencies": [
+            "base"
+          ],
+          "status": "healthy",
+          "reason": "authored named reference assumption"
+        },
+        {
+          "id": "holes",
+          "dependencies": [
+            "hole-reference"
+          ],
+          "status": "healthy",
+          "reason": "authored edge margin and two-hole spacing constraints"
+        },
+        {
+          "id": "fillet",
+          "dependencies": [
+            "holes"
+          ],
+          "status": "healthy",
+          "reason": "authored fillet clearance bound"
+        },
+        {
+          "id": "topology-contract",
+          "dependencies": [
+            "fillet"
+          ],
+          "status": "healthy",
+          "reason": "authored expected hole count preserved",
+          "expectedHoles": 2,
+          "declaredHoles": 2
+        }
+      ],
+      "firstFailure": null
+    },
+    {
+      "contractVersion": "authored-bracket-v1",
+      "parameters": {
+        "edgeDistance": 8,
+        "fillet": 1,
+        "height": 40,
+        "holeDiameter": 12,
+        "thickness": 4,
+        "width": 40
+      },
+      "strategy": "face-index",
+      "omitHoles": false,
+      "includeUnknownGroup": false,
+      "fingerprint": "7d002afc6d54eb9725e6f25e1c8e77934a02a816fd103fbeda0b75c1a207ea7c",
+      "provenance": "authored symbolic design contract; no geometric kernel",
+      "fusionIntegration": false,
+      "status": "healthy",
+      "violations": [],
+      "features": [
+        {
+          "id": "base",
+          "dependencies": [],
+          "status": "healthy",
+          "reason": "stock width and height at least twice thickness"
+        },
+        {
+          "id": "hole-reference",
+          "dependencies": [
+            "base"
+          ],
+          "status": "healthy",
+          "reason": "authored unstable face-index threshold at thickness > 6"
+        },
+        {
+          "id": "holes",
+          "dependencies": [
+            "hole-reference"
+          ],
+          "status": "healthy",
+          "reason": "authored edge margin and two-hole spacing constraints"
+        },
+        {
+          "id": "fillet",
+          "dependencies": [
+            "holes"
+          ],
+          "status": "healthy",
+          "reason": "authored fillet clearance bound"
+        },
+        {
+          "id": "topology-contract",
+          "dependencies": [
+            "fillet"
+          ],
+          "status": "healthy",
+          "reason": "authored expected hole count preserved",
+          "expectedHoles": 2,
+          "declaredHoles": 2
+        }
+      ],
+      "firstFailure": null
+    },
+    {
+      "contractVersion": "authored-bracket-v1",
+      "parameters": {
+        "edgeDistance": 8,
+        "fillet": 1,
+        "height": 40,
+        "holeDiameter": 12,
+        "thickness": 4,
+        "width": 40
+      },
+      "strategy": "named",
+      "omitHoles": false,
+      "includeUnknownGroup": false,
+      "fingerprint": "72422f107514f3b48b4f8ba05b09f6cf265afb62af1981ffd643b5d4c0f05e97",
+      "provenance": "authored symbolic design contract; no geometric kernel",
+      "fusionIntegration": false,
+      "status": "healthy",
+      "violations": [],
+      "features": [
+        {
+          "id": "base",
+          "dependencies": [],
+          "status": "healthy",
+          "reason": "stock width and height at least twice thickness"
+        },
+        {
+          "id": "hole-reference",
+          "dependencies": [
+            "base"
+          ],
+          "status": "healthy",
+          "reason": "authored named reference assumption"
+        },
+        {
+          "id": "holes",
+          "dependencies": [
+            "hole-reference"
+          ],
+          "status": "healthy",
+          "reason": "authored edge margin and two-hole spacing constraints"
+        },
+        {
+          "id": "fillet",
+          "dependencies": [
+            "holes"
+          ],
+          "status": "healthy",
+          "reason": "authored fillet clearance bound"
+        },
+        {
+          "id": "topology-contract",
+          "dependencies": [
+            "fillet"
+          ],
+          "status": "healthy",
+          "reason": "authored expected hole count preserved",
+          "expectedHoles": 2,
+          "declaredHoles": 2
+        }
+      ],
+      "firstFailure": null
+    },
+    {
+      "contractVersion": "authored-bracket-v1",
+      "parameters": {
+        "edgeDistance": 4,
+        "fillet": 1,
+        "height": 40,
+        "holeDiameter": 6,
+        "thickness": 8,
+        "width": 40
+      },
+      "strategy": "face-index",
+      "omitHoles": false,
+      "includeUnknownGroup": false,
+      "fingerprint": "c8e1b8c0e31519c84b65a56d780475e43510bc2a69174a30854b23f33941badb",
+      "provenance": "authored symbolic design contract; no geometric kernel",
+      "fusionIntegration": false,
+      "status": "failed",
+      "violations": [],
+      "features": [
+        {
+          "id": "base",
+          "dependencies": [],
+          "status": "healthy",
+          "reason": "stock width and height at least twice thickness"
+        },
+        {
+          "id": "hole-reference",
+          "dependencies": [
+            "base"
+          ],
+          "status": "failed",
+          "reason": "authored unstable face-index threshold at thickness > 6"
+        },
+        {
+          "id": "holes",
+          "dependencies": [
+            "hole-reference"
+          ],
+          "status": "blocked",
+          "reason": "upstream contract did not pass",
+          "blockedBy": [
+            "hole-reference"
+          ]
+        },
+        {
+          "id": "fillet",
+          "dependencies": [
+            "holes"
+          ],
+          "status": "blocked",
+          "reason": "upstream contract did not pass",
+          "blockedBy": [
+            "holes"
+          ]
+        },
+        {
+          "id": "topology-contract",
+          "dependencies": [
+            "fillet"
+          ],
+          "status": "blocked",
+          "reason": "upstream contract did not pass",
+          "blockedBy": [
+            "fillet"
+          ]
+        }
+      ],
+      "firstFailure": "hole-reference"
+    },
+    {
+      "contractVersion": "authored-bracket-v1",
+      "parameters": {
+        "edgeDistance": 4,
+        "fillet": 1,
+        "height": 40,
+        "holeDiameter": 6,
+        "thickness": 8,
+        "width": 40
+      },
+      "strategy": "named",
+      "omitHoles": false,
+      "includeUnknownGroup": false,
+      "fingerprint": "b9bc4c50e75c65b206dd7653dfbeaa87109beab7ecbe6ed62f0f16826587ec16",
+      "provenance": "authored symbolic design contract; no geometric kernel",
+      "fusionIntegration": false,
+      "status": "healthy",
+      "violations": [],
+      "features": [
+        {
+          "id": "base",
+          "dependencies": [],
+          "status": "healthy",
+          "reason": "stock width and height at least twice thickness"
+        },
+        {
+          "id": "hole-reference",
+          "dependencies": [
+            "base"
+          ],
+          "status": "healthy",
+          "reason": "authored named reference assumption"
+        },
+        {
+          "id": "holes",
+          "dependencies": [
+            "hole-reference"
+          ],
+          "status": "healthy",
+          "reason": "authored edge margin and two-hole spacing constraints"
+        },
+        {
+          "id": "fillet",
+          "dependencies": [
+            "holes"
+          ],
+          "status": "healthy",
+          "reason": "authored fillet clearance bound"
+        },
+        {
+          "id": "topology-contract",
+          "dependencies": [
+            "fillet"
+          ],
+          "status": "healthy",
+          "reason": "authored expected hole count preserved",
+          "expectedHoles": 2,
+          "declaredHoles": 2
+        }
+      ],
+      "firstFailure": null
+    },
+    {
+      "contractVersion": "authored-bracket-v1",
+      "parameters": {
+        "edgeDistance": 4,
+        "fillet": 1,
+        "height": 40,
+        "holeDiameter": 12,
+        "thickness": 8,
+        "width": 40
+      },
+      "strategy": "face-index",
+      "omitHoles": false,
+      "includeUnknownGroup": false,
+      "fingerprint": "32ba82d6ceee78c062c88b03dfd597d962f7cfa15ee2e282468752cc391ade8c",
+      "provenance": "authored symbolic design contract; no geometric kernel",
+      "fusionIntegration": false,
+      "status": "failed",
+      "violations": [],
+      "features": [
+        {
+          "id": "base",
+          "dependencies": [],
+          "status": "healthy",
+          "reason": "stock width and height at least twice thickness"
+        },
+        {
+          "id": "hole-reference",
+          "dependencies": [
+            "base"
+          ],
+          "status": "failed",
+          "reason": "authored unstable face-index threshold at thickness > 6"
+        },
+        {
+          "id": "holes",
+          "dependencies": [
+            "hole-reference"
+          ],
+          "status": "blocked",
+          "reason": "upstream contract did not pass",
+          "blockedBy": [
+            "hole-reference"
+          ]
+        },
+        {
+          "id": "fillet",
+          "dependencies": [
+            "holes"
+          ],
+          "status": "blocked",
+          "reason": "upstream contract did not pass",
+          "blockedBy": [
+            "holes"
+          ]
+        },
+        {
+          "id": "topology-contract",
+          "dependencies": [
+            "fillet"
+          ],
+          "status": "blocked",
+          "reason": "upstream contract did not pass",
+          "blockedBy": [
+            "fillet"
+          ]
+        }
+      ],
+      "firstFailure": "hole-reference"
+    },
+    {
+      "contractVersion": "authored-bracket-v1",
+      "parameters": {
+        "edgeDistance": 4,
+        "fillet": 1,
+        "height": 40,
+        "holeDiameter": 12,
+        "thickness": 8,
+        "width": 40
+      },
+      "strategy": "named",
+      "omitHoles": false,
+      "includeUnknownGroup": false,
+      "fingerprint": "c59813c58ae801d2edb46ac399563b66d13cf01f82e0d9dcdaedc9e03e261d33",
+      "provenance": "authored symbolic design contract; no geometric kernel",
+      "fusionIntegration": false,
+      "status": "failed",
+      "violations": [],
+      "features": [
+        {
+          "id": "base",
+          "dependencies": [],
+          "status": "healthy",
+          "reason": "stock width and height at least twice thickness"
+        },
+        {
+          "id": "hole-reference",
+          "dependencies": [
+            "base"
+          ],
+          "status": "healthy",
+          "reason": "authored named reference assumption"
+        },
+        {
+          "id": "holes",
+          "dependencies": [
+            "hole-reference"
+          ],
+          "status": "failed",
+          "reason": "authored edge margin and two-hole spacing constraints"
+        },
+        {
+          "id": "fillet",
+          "dependencies": [
+            "holes"
+          ],
+          "status": "blocked",
+          "reason": "upstream contract did not pass",
+          "blockedBy": [
+            "holes"
+          ]
+        },
+        {
+          "id": "topology-contract",
+          "dependencies": [
+            "fillet"
+          ],
+          "status": "blocked",
+          "reason": "upstream contract did not pass",
+          "blockedBy": [
+            "fillet"
+          ]
+        }
+      ],
+      "firstFailure": "holes"
+    },
+    {
+      "contractVersion": "authored-bracket-v1",
+      "parameters": {
+        "edgeDistance": 8,
+        "fillet": 1,
+        "height": 40,
+        "holeDiameter": 6,
+        "thickness": 8,
+        "width": 40
+      },
+      "strategy": "face-index",
+      "omitHoles": false,
+      "includeUnknownGroup": false,
+      "fingerprint": "9e6c2c7d000ebf7b9fc13beaafe395498afc51f10d1cdb6274e109734ef389ed",
+      "provenance": "authored symbolic design contract; no geometric kernel",
+      "fusionIntegration": false,
+      "status": "failed",
+      "violations": [],
+      "features": [
+        {
+          "id": "base",
+          "dependencies": [],
+          "status": "healthy",
+          "reason": "stock width and height at least twice thickness"
+        },
+        {
+          "id": "hole-reference",
+          "dependencies": [
+            "base"
+          ],
+          "status": "failed",
+          "reason": "authored unstable face-index threshold at thickness > 6"
+        },
+        {
+          "id": "holes",
+          "dependencies": [
+            "hole-reference"
+          ],
+          "status": "blocked",
+          "reason": "upstream contract did not pass",
+          "blockedBy": [
+            "hole-reference"
+          ]
+        },
+        {
+          "id": "fillet",
+          "dependencies": [
+            "holes"
+          ],
+          "status": "blocked",
+          "reason": "upstream contract did not pass",
+          "blockedBy": [
+            "holes"
+          ]
+        },
+        {
+          "id": "topology-contract",
+          "dependencies": [
+            "fillet"
+          ],
+          "status": "blocked",
+          "reason": "upstream contract did not pass",
+          "blockedBy": [
+            "fillet"
+          ]
+        }
+      ],
+      "firstFailure": "hole-reference"
+    },
+    {
+      "contractVersion": "authored-bracket-v1",
+      "parameters": {
+        "edgeDistance": 8,
+        "fillet": 1,
+        "height": 40,
+        "holeDiameter": 6,
+        "thickness": 8,
+        "width": 40
+      },
+      "strategy": "named",
+      "omitHoles": false,
+      "includeUnknownGroup": false,
+      "fingerprint": "c037d1a8302eb1af754f88fc9ed373cdddeb94ad02a982066992f34c7b4aefc1",
+      "provenance": "authored symbolic design contract; no geometric kernel",
+      "fusionIntegration": false,
+      "status": "healthy",
+      "violations": [],
+      "features": [
+        {
+          "id": "base",
+          "dependencies": [],
+          "status": "healthy",
+          "reason": "stock width and height at least twice thickness"
+        },
+        {
+          "id": "hole-reference",
+          "dependencies": [
+            "base"
+          ],
+          "status": "healthy",
+          "reason": "authored named reference assumption"
+        },
+        {
+          "id": "holes",
+          "dependencies": [
+            "hole-reference"
+          ],
+          "status": "healthy",
+          "reason": "authored edge margin and two-hole spacing constraints"
+        },
+        {
+          "id": "fillet",
+          "dependencies": [
+            "holes"
+          ],
+          "status": "healthy",
+          "reason": "authored fillet clearance bound"
+        },
+        {
+          "id": "topology-contract",
+          "dependencies": [
+            "fillet"
+          ],
+          "status": "healthy",
+          "reason": "authored expected hole count preserved",
+          "expectedHoles": 2,
+          "declaredHoles": 2
+        }
+      ],
+      "firstFailure": null
+    },
+    {
+      "contractVersion": "authored-bracket-v1",
+      "parameters": {
+        "edgeDistance": 8,
+        "fillet": 1,
+        "height": 40,
+        "holeDiameter": 12,
+        "thickness": 8,
+        "width": 40
+      },
+      "strategy": "face-index",
+      "omitHoles": false,
+      "includeUnknownGroup": false,
+      "fingerprint": "e4baf4f27b54440d570b75e83292be857330c76716bb4e5ea02edf5f5d397187",
+      "provenance": "authored symbolic design contract; no geometric kernel",
+      "fusionIntegration": false,
+      "status": "failed",
+      "violations": [],
+      "features": [
+        {
+          "id": "base",
+          "dependencies": [],
+          "status": "healthy",
+          "reason": "stock width and height at least twice thickness"
+        },
+        {
+          "id": "hole-reference",
+          "dependencies": [
+            "base"
+          ],
+          "status": "failed",
+          "reason": "authored unstable face-index threshold at thickness > 6"
+        },
+        {
+          "id": "holes",
+          "dependencies": [
+            "hole-reference"
+          ],
+          "status": "blocked",
+          "reason": "upstream contract did not pass",
+          "blockedBy": [
+            "hole-reference"
+          ]
+        },
+        {
+          "id": "fillet",
+          "dependencies": [
+            "holes"
+          ],
+          "status": "blocked",
+          "reason": "upstream contract did not pass",
+          "blockedBy": [
+            "holes"
+          ]
+        },
+        {
+          "id": "topology-contract",
+          "dependencies": [
+            "fillet"
+          ],
+          "status": "blocked",
+          "reason": "upstream contract did not pass",
+          "blockedBy": [
+            "fillet"
+          ]
+        }
+      ],
+      "firstFailure": "hole-reference"
+    },
+    {
+      "contractVersion": "authored-bracket-v1",
+      "parameters": {
+        "edgeDistance": 8,
+        "fillet": 1,
+        "height": 40,
+        "holeDiameter": 12,
+        "thickness": 8,
+        "width": 40
+      },
+      "strategy": "named",
+      "omitHoles": false,
+      "includeUnknownGroup": false,
+      "fingerprint": "6f30034305ddd906ea89357b70cf12f7b4ce0b118e03c588c6570ae7b1481453",
+      "provenance": "authored symbolic design contract; no geometric kernel",
+      "fusionIntegration": false,
+      "status": "healthy",
+      "violations": [],
+      "features": [
+        {
+          "id": "base",
+          "dependencies": [],
+          "status": "healthy",
+          "reason": "stock width and height at least twice thickness"
+        },
+        {
+          "id": "hole-reference",
+          "dependencies": [
+            "base"
+          ],
+          "status": "healthy",
+          "reason": "authored named reference assumption"
+        },
+        {
+          "id": "holes",
+          "dependencies": [
+            "hole-reference"
+          ],
+          "status": "healthy",
+          "reason": "authored edge margin and two-hole spacing constraints"
+        },
+        {
+          "id": "fillet",
+          "dependencies": [
+            "holes"
+          ],
+          "status": "healthy",
+          "reason": "authored fillet clearance bound"
+        },
+        {
+          "id": "topology-contract",
+          "dependencies": [
+            "fillet"
+          ],
+          "status": "healthy",
+          "reason": "authored expected hole count preserved",
+          "expectedHoles": 2,
+          "declaredHoles": 2
+        }
+      ],
+      "firstFailure": null
+    }
+  ],
+  "summary": {
+    "face-index": {
+      "cases": 8,
+      "healthy": 3,
+      "failed": 5
+    },
+    "named": {
+      "cases": 8,
+      "healthy": 6,
+      "failed": 2
+    }
+  },
+  "negativeControls": {
+    "outOfIntent": {
+      "contractVersion": "authored-bracket-v1",
+      "parameters": {
+        "edgeDistance": 8,
+        "fillet": 1,
+        "height": 40,
+        "holeDiameter": 6,
+        "thickness": 4,
+        "width": 100
+      },
+      "strategy": "named",
+      "omitHoles": false,
+      "includeUnknownGroup": false,
+      "fingerprint": "505eba7f0ce27b48becf74002414b135d5511e8600a9fc715bfb3a4ab17166ea",
+      "provenance": "authored symbolic design contract; no geometric kernel",
+      "fusionIntegration": false,
+      "status": "out_of_scope",
+      "violations": [
+        {
+          "parameter": "width",
+          "reason": "requires finite value in [20,80]"
+        }
+      ],
+      "features": [],
+      "firstFailure": null
+    },
+    "unknownGroup": {
+      "contractVersion": "authored-bracket-v1",
+      "parameters": {
+        "edgeDistance": 8,
+        "fillet": 1,
+        "height": 40,
+        "holeDiameter": 6,
+        "thickness": 4,
+        "width": 40
+      },
+      "strategy": "named",
+      "omitHoles": false,
+      "includeUnknownGroup": true,
+      "fingerprint": "ca044a348e0ff7a122f2733059f1c86fba810f6a75cb770c00bdebb16c56f6bb",
+      "provenance": "authored symbolic design contract; no geometric kernel",
+      "fusionIntegration": false,
+      "status": "unknown",
+      "violations": [],
+      "features": [
+        {
+          "id": "base",
+          "dependencies": [],
+          "status": "healthy",
+          "reason": "stock width and height at least twice thickness"
+        },
+        {
+          "id": "hole-reference",
+          "dependencies": [
+            "base"
+          ],
+          "status": "healthy",
+          "reason": "authored named reference assumption"
+        },
+        {
+          "id": "holes",
+          "dependencies": [
+            "hole-reference"
+          ],
+          "status": "healthy",
+          "reason": "authored edge margin and two-hole spacing constraints"
+        },
+        {
+          "id": "fillet",
+          "dependencies": [
+            "holes"
+          ],
+          "status": "healthy",
+          "reason": "authored fillet clearance bound"
+        },
+        {
+          "id": "topology-contract",
+          "dependencies": [
+            "fillet"
+          ],
+          "status": "healthy",
+          "reason": "authored expected hole count preserved",
+          "expectedHoles": 2,
+          "declaredHoles": 2
+        },
+        {
+          "id": "timeline-group",
+          "dependencies": [],
+          "status": "unknown",
+          "reason": "group health is not observed"
+        }
+      ],
+      "firstFailure": null
+    },
+    "warningClearingBadRepair": {
+      "contractVersion": "authored-bracket-v1",
+      "parameters": {
+        "edgeDistance": 8,
+        "fillet": 1,
+        "height": 40,
+        "holeDiameter": 6,
+        "thickness": 4,
+        "width": 40
+      },
+      "strategy": "named",
+      "omitHoles": true,
+      "includeUnknownGroup": false,
+      "fingerprint": "91ebe150e56658bc93234cde157aaa18417a7591c016af73ed9fc763de0c632e",
+      "provenance": "authored symbolic design contract; no geometric kernel",
+      "fusionIntegration": false,
+      "status": "failed",
+      "violations": [],
+      "features": [
+        {
+          "id": "base",
+          "dependencies": [],
+          "status": "healthy",
+          "reason": "stock width and height at least twice thickness"
+        },
+        {
+          "id": "hole-reference",
+          "dependencies": [
+            "base"
+          ],
+          "status": "healthy",
+          "reason": "authored named reference assumption"
+        },
+        {
+          "id": "holes",
+          "dependencies": [
+            "hole-reference"
+          ],
+          "status": "healthy",
+          "reason": "authored edge margin and two-hole spacing constraints"
+        },
+        {
+          "id": "fillet",
+          "dependencies": [
+            "holes"
+          ],
+          "status": "healthy",
+          "reason": "authored fillet clearance bound"
+        },
+        {
+          "id": "topology-contract",
+          "dependencies": [
+            "fillet"
+          ],
+          "status": "failed",
+          "reason": "repair omitted required two holes",
+          "expectedHoles": 2,
+          "declaredHoles": 0
+        }
+      ],
+      "firstFailure": "topology-contract"
+    }
+  }
+}
