@@ -32,7 +32,7 @@ Failed dependencies block downstream checks. The first failure is reported with 
 
 ## Why this implementation and what remains
 
-Node ESM keeps the contract evaluator directly runnable with runtime checks. C++ is appropriate for the eventual installed Fusion add-in or a real geometric kernel; using C++ for these scalar fixtures would not supply missing CAD integration. The next stage needs a licensed Fusion installation, authored bracket documents, disposable document copies, true feature-health extraction and measured geometry signatures. Only then can real strategy sweeps or bounded repair templates be evaluated. GitHub Actions is prepared but has not run remotely.
+Node ESM keeps the contract evaluator directly runnable with runtime checks. C++ is appropriate for the eventual installed Fusion add-in or a real geometric kernel; using C++ for these scalar fixtures would not supply missing CAD integration. The next stage needs a licensed Fusion installation, authored bracket documents, disposable document copies, true feature-health extraction and measured geometry signatures. Only then can real strategy sweeps or bounded repair templates be evaluated. GitHub Actions runs the same tests and CLI demo; inspect the repository Actions tab for the latest hosted result.
 
 ## Sources and overlap
 
