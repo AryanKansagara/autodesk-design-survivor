@@ -1,0 +1,14 @@
+{
+  "name": "autodesk-design-survivor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Authored scalar bracket contract and dependency evaluator only; no Fusion SDK, geometric kernel, CAD rebuild or real repair evidence.",
+  "scripts": {
+    "test": "node --test",
+    "demo": "node cli.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

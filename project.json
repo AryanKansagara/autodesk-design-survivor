@@ -1,0 +1,9 @@
+{
+  "company": "Autodesk",
+  "title": "Design Survivor",
+  "test_command": "node --test",
+  "demo_command": "node cli.mjs",
+  "scope": "Authored scalar bracket contract and dependency evaluator only; no Fusion SDK, geometric kernel, CAD rebuild or real repair evidence.",
+  "implemented": true,
+  "integration_status": "unverified"
+}
